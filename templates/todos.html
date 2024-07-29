@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Todos{% endblock %}
+{% block content %}
+    <h1>Todos</h1>
+    <div class="list-group">
+        {% for todo in todos %}
+            <div class="list-group-item">
+                <h5 class="mb-1">{{ todo.title }}</h5>
+                <p class="mb-1">{% if todo.completed %}Completed{% else %}Not Completed{% endif %}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
